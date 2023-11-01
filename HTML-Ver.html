@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UwU Chan your Cashier Waifu</title>
+</head>
+<body>
+    <h1>Welcome, Senpai, to UwU Chan your Cashier Waifu!</h1>
+    
+    <div>
+        <label for="quantityProduct1">Senpai, how many Apples are you buying? UwU:</label>
+        <input type="number" id="quantityProduct1">
+    </div>
+
+    <div>
+        <label for="quantityProduct2">Senpai, how many Bananas are you buying? UwU:</label>
+        <input type="number" id="quantityProduct2">
+    </div>
+
+    <div>
+        <label for="quantityProduct3">Senpai, how many Oranges are you buying? UwU:</label>
+        <input type="number" id="quantityProduct3">
+    </div>
+
+    <div>
+        <label for="quantityProduct4">Senpai, how many Strawberries are you buying? UwU:</label>
+        <input type="number" id="quantityProduct4">
+    </div>
+
+    <div>
+        <label for="moneyInWallet">Senpai, how much money do you have in your wallet? UwU:</label>
+        <input type="number" id="moneyInWallet">
+    </div>
+
+    <button onclick="calculateReceipt()">Calculate Receipt</button>
+
+    <h2>Result:</h2>
+    <pre id="result"></pre>
+
+    <script>
+        function calculateReceipt() {
+            // Get input values
+            const quantityProduct1 = parseInt(document.getElementById("quantityProduct1").value);
+            const quantityProduct2 = parseInt(document.getElementById("quantityProduct2").value);
+            const quantityProduct3 = parseInt(document.getElementById("quantityProduct3").value);
+            const quantityProduct4 = parseInt(document.getElementById("quantityProduct4").value);
+            const moneyInWallet = parseFloat(document.getElementById("moneyInWallet").value);
+
+            // Define prices
+            const priceProduct1 = 1.99;
+            const priceProduct2 = 2.49;
+            const priceProduct3 = 1.79;
+            const priceProduct4 = 3.29;
+
+            // Calculate total price
+            const totalPrice = (quantityProduct1 * priceProduct1) +
+                               (quantityProduct2 * priceProduct2) +
+                               (quantityProduct3 * priceProduct3) +
+                               (quantityProduct4 * priceProduct4);
+
+            // Calculate change
+            const change = moneyInWallet - totalPrice;
+
+            // Prepare the result message
+            let resultMessage = "";
+            if (change >= 0) {
+                resultMessage += "Cash Receipt:\n";
+                resultMessage += "-------------\n";
+                resultMessage += `${quantityProduct1}x Apple: ${(quantityProduct1 * priceProduct1).toFixed(2)} Euro\n`;
+                resultMessage += `${quantityProduct2}x Banana: ${(quantityProduct2 * priceProduct2).toFixed(2)} Euro\n`;
+                resultMessage += `${quantityProduct3}x Orange: ${(quantityProduct3 * priceProduct3).toFixed(2)} Euro\n`;
+                resultMessage += `${quantityProduct4}x Strawberry: ${(quantityProduct4 * priceProduct4).toFixed(2)} Euro\n`;
+                resultMessage += "-------------\n";
+                resultMessage += `Total Price: ${(totalPrice).toFixed(2)} Euro\n`;
+                resultMessage += `Change: ${(change).toFixed(2)} Euro\n`;
+            } else {
+                resultMessage += "Nyan~ Senpai, you don't have enough money in your wallet for this purchase. OwO";
+            }
+
+            // Display the result
+            document.getElementById("result").textContent = resultMessage;
+        }
+    </script>
+</body>
+</html>
