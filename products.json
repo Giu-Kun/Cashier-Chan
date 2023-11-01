@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "name": "Magical Elixir",
+            "price": 9.99,
+            "stock": 50,
+            "description": "A sparkling potion that grants temporary flight.",
+            "character": "The Enchanter"
+        },
+        {
+            "name": "Dragon Scale Armor",
+            "price": 49.99,
+            "stock": 30,
+            "description": "Legendary armor forged from the scales of a fire-breathing dragon.",
+            "character": "The Dragon Slayer"
+        },
+        {
+            "name": "Pixie Dust",
+            "price": 19.99,
+            "stock": 40,
+            "description": "Glittering dust that grants the ability to shrink in size.",
+            "character": "The Fairy Whisperer"
+        },
+        {
+            "name": "Time-Traveling Pocket Watch",
+            "price": 99.99,
+            "stock": 20,
+            "description": "A pocket-sized device that lets you travel through time.",
+            "character": "The Time Traveler"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Shoppe of Wonders</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external styles.css -->
+</head>
+<body>
+    <div id="entire-page"> <!-- This div contains the entire page -->
+        <div id="header">
+            <h1>Magical Shoppe of Wonders</h1>
+            <button class="dark-mode-button" id="dark-mode-button">Toggle Dark Mode</button> <!-- Dark mode button -->
+        </div>
+        <div id="container">
+            <textarea id="console" readonly></textarea>
+            <textarea id="input" placeholder="Type your magical commands here and press Enter"></textarea>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+    <script src="cashier.js"></script>
+
+    <script>
+        const darkModeButton = document.getElementById('dark-mode-button');
+        const body = document.body;
+        const entirePage = document.getElementById('entire-page'); // New element
+
+        darkModeButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            entirePage.classList.toggle('dark-mode'); // Toggle dark mode for the entire page
+        });
+    </script>
+</body>
+</html>

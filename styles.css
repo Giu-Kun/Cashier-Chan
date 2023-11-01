@@ -1,0 +1,124 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #ffc0cb; /* Pastel Pink */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 28px;
+    margin-top: 0;
+    color: #333;
+}
+
+#console {
+    width: 100%;
+    height: 300px;
+    background-color: #f0f0f0; /* Light Gray */
+    color: #00cc66; /* Pastel Green */
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+}
+
+#input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0; /* Light Gray */
+    color: #00cc66; /* Pastel Green */
+    outline: none;
+}
+
+#reset-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffc0cb; /* Pastel Pink */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333; /* Dark Gray */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #console {
+        height: 200px;
+    }
+
+    #input {
+        padding: 8px;
+    }
+
+    #reset-button {
+        margin-top: 8px;
+        padding: 8px 16px;
+    }
+}
+
+/* Add this to your styles.css */
+html.dark-mode, body.dark-mode {
+    background-color: #111; /* Dark Background */
+    color: #fff;
+}
+
+.dark-mode #header {
+    background-color: #333; /* Dark Gray */
+}
+
+.dark-mode #container {
+    background-color: #333; /* Dark Gray */
+}
+
+.dark-mode h1 {
+    color: #fff;
+}
+
+.dark-mode #console {
+    background-color: #000; /* Black */
+    color: #00ff00; /* Bright Green */
+}
+
+.dark-mode #input {
+    background-color: #000; /* Black */
+    color: #00ff00; /* Bright Green */
+}
+
+/* Dark mode for the entire page background */
+.dark-mode #entire-page {
+    background-color: #111; /* Dark Background */
+}
